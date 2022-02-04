@@ -1,0 +1,30 @@
+﻿@model ProductListViewModel
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Product List</h2>
+    <table class="table table-responsive">
+        @foreach (var item in Model.Products)
+        {
+            <tr>
+                <td>@item.ProductId</td>
+                <td>@item.ProductName</td>
+                <td>@item.QuantityPerUnit</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
